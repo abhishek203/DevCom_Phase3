@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6CECE"
+    tools:context=".ChatActivity">
+
+    <include
+        android:id="@+id/chat_app_bar"
+        layout="@layout/app_bar_layout" />
+
+    <ImageButton
+        android:id="@+id/chatsendbtn"
+        android:layout_width="68dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="18dp"
+        android:background="#FFFFFF"
+        android:tint="#0627E1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chatmsg"
+        app:layout_constraintTop_toBottomOf="@+id/chat_list"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/chatmsg"
+        android:layout_width="312dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="21dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="@string/enter_your_message"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chatsendbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_list"
+        android:autofillHints="" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_list"
+        android:layout_width="409dp"
+        android:layout_height="595dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/chatsendbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_app_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
